@@ -9,8 +9,8 @@ blog is to introduce the basic theory of Causal Inference
 as simply as possible but meanwhile keeps the structure clear.</font>
 
 ---
-##Part I : Introduction
-###1. What is causal?
+## Part I : Introduction
+### 1. What is causal?
 It seems a stupid question since everyone can simply 
 answer, but, the **causal** relation mentioned this blog 
 may different slightly from what **causal** means in our 
@@ -23,7 +23,7 @@ Operation: Observation(Condition) / Intervention
 ```
 <br>
 
-####Causation：
+#### Causation：
 The change of **cause** will lead to the change of **result**.
 
 ```mermaid
@@ -40,7 +40,7 @@ on A changed.
 
 <br>
 
-####Association:
+#### Association:
 Variables statistically dependent.<br>
 ```mermaid
 graph LR;
@@ -74,7 +74,7 @@ A-->C
 
 <br>
 
-####Observation(Condition):
+#### Observation(Condition):
 Observation means directly get the data from the raw statistics 
 data and then use it as **prior knowledge** to predict other
 variables. For example, if given an unknown thermometer, we
@@ -109,7 +109,7 @@ D: Dependent variable in causation)
 ```
 <br>
 
-####Intervention 
+#### Intervention 
 Intervention means manually changed a variable to a certain
 value, for example: if we want to find whether regular exercise
 contributes to a higher grade, we assume that regular exercise
@@ -167,7 +167,7 @@ D: Dependent variable in causation)
 ```
 <br>
 
-###2. Why causal inference important?
+### 2. Why causal inference important?
 
 Actually, most of our present methods in machine learning is
 based on association, not causation. Think about the example
