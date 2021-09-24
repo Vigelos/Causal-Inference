@@ -1,5 +1,8 @@
 # A blog to introduce you to the basic theory of causal inference(I)
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+
 <font size=2>Causal Inference has recently become a hot 
 topic to improve the result of many previous methods 
 in the area of machine learning, receiving considerable 
@@ -44,11 +47,13 @@ on A changed.
 Variables statistically dependent.<br>
 ```mermaid
 graph LR;
-B((Oil price))
-C((House price))
+B((O))
+C((H))
 B---->C
 C---->B
 ```
+<font size="2">(O: oil price &nbsp;&nbsp; H: house price)</font>
+
 We may often see that the house price in a country where 
 the oil price is high will also be considerably high, and 
 if the house price is dropping quickly, we are likely to
@@ -135,9 +140,6 @@ irrespective of whether the student's exercise condition
 is originally regular or irregular if there hadn't been our
 experiment.
 
-<center class="half">
-<img src="WeChat%20Image_20210924093846.jpg" width="50%" align="left"><img src="WeChat%20Image_20210924093903.jpg" width="50%" align="right">
-</center>
 
 <br>
 
@@ -231,7 +233,8 @@ C((F))
 A-->C
 A-->B
 ```
-<font size="2">(O: the output of the chemical)</font><br>
+<font size="2">(O: the output of the chemical)</font>
+
 <font size="2">(Real situation: Gene control both the features and the output of the chemical)</font>
 ```mermaid
 graph LR
@@ -240,3 +243,11 @@ B((F))
 B-->A
 ```
 <font size=2>(Ostensible situation: features have causal effect on the output of the chemical)</font>
+
+
+<div class="mermaid">
+graph TB
+A((A))
+B((B))
+A-->B
+</div>
