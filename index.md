@@ -79,7 +79,6 @@ As described above, observation on the independent variable
 will lead to the change in our prediction on the dependent
 variable(P(y)!=P(y|x)). Actually, observation will affect
 it's counterpart in all relationships:<br>
-```mermaid
 
 ![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(11).png)
 
