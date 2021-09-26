@@ -28,7 +28,8 @@ Operation: Observation(Condition) / Intervention
 #### Causation：
 The change of **cause** will lead to the change of **result**.
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(8).png)
+![Image](pictures/part1/2021-09-25%20(8).png)
+<!-- {% asset https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(8).png example %} -->
 
 <font size=2>(A: body temperature &nbsp; &nbsp;B: thermometer)</font>
 <br><br>
