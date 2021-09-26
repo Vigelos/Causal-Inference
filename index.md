@@ -10,7 +10,7 @@ may seem not so easy for new-comers to get start. So this
 blog is to introduce the basic theory of Causal Inference 
 as simply as possible but meanwhile keeps the structure clear.</font>
 
-<img src="pictures/1.png"></img>
+
 
 ---
 ## Part I : Introduction
@@ -29,9 +29,9 @@ Operation: Observation(Condition) / Intervention
 
 #### Causation：
 The change of **cause** will lead to the change of **result**.
-<!-- 
-![Image](pictures/1.png) -->
-<img src="pictures/1.png"></img>
+
+![Image](pictures/1.png)
+<!-- <img src="pictures/1.png"> -->
 
 
 <font size=2>(A: body temperature &nbsp; &nbsp;B: thermometer)</font>
