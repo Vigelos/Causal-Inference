@@ -108,7 +108,7 @@ To prove our assumption, **we command that all students in
 our school must exercise regularly**, and then we surprisingly 
 found that the grades of all students has been improved,
 which means regular exercise do have causal effect on 
-a good grade.
+a good grade.(In contrast, **observation** is we only take the students who exercise regularly as example and leave ones exercise irregularly alone.)
 
 In this case, we use **do(E=e) or do(e)** to denote that we
 **intervened** on variable E(exercise condition). We change
