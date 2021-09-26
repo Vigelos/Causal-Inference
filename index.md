@@ -28,8 +28,8 @@ Operation: Observation(Condition) / Intervention
 #### Causation：
 The change of **cause** will lead to the change of **result**.
 
-![Image](pictures/part1/2021-09-25%20(8).png)
-<!-- {% asset https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(8).png example %} -->
+![Image](pictures/1.png)
+<!-- {% asset https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/1.png example %} -->
 
 <font size=2>(A: body temperature &nbsp; &nbsp;B: thermometer)</font>
 <br><br>
@@ -44,8 +44,7 @@ on A changed.
 #### Association:
 Variables statistically dependent.<br>
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(9).png)
-
+![Image](pictures/2.png)
 <font size="2">(O: oil price &nbsp;&nbsp; H: house price)</font>
 
 We may often see that the house price in a country where 
@@ -62,7 +61,7 @@ relation between oil price and house price as causal
 association**. So, later in this blog, we will refer to variables 
 of this type as ***confounder***.
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(10).png)
+![Image](pictures/3.png)
 
 <font size=2>(I: inflation &nbsp;&nbsp;  O: oil price &nbsp;&nbsp;  H: house price)</font>
 
@@ -81,7 +80,7 @@ will lead to the change in our prediction on the dependent
 variable(P(y)!=P(y|x)). Actually, observation will affect
 it's counterpart in all relationships:<br>
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(11).png)
+![Image](pictures/4.png)
 
 ```html
 P(A1) != P(A1 | A2)
@@ -101,7 +100,7 @@ value, for example: if we want to find whether regular exercise
 contributes to a higher grade, we assume that regular exercise
 has causal effect on good grades:
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(12).png)
+![Image](pictures/5.png)
 
 <font size=2>(E: regular exercise &nbsp;&nbsp; G: good grades)</font>
 
@@ -125,7 +124,7 @@ Unlike **condition** mentioned above, **intervention** only
 effects the dependent variable as independent variable in 
 causal association:
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(13).png)
+![Image](pictures/6.png)
 
 ```html
 P(A1) = P(A1 | do(A2=a2))
@@ -159,7 +158,7 @@ labels. In this case, the relation between features and
 the species are **association**, not **causation**. Actually
 the causal structure should be like this:
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(14).png)
+![Image](pictures/7.png)
 
 <font size=2>(G: gene &nbsp;&nbsp; F: features &nbsp;&nbsp; S: species)</font>
 
@@ -191,13 +190,13 @@ depends largely on the species rather than the features.
 Because we misunderstand association as causation, our plan
 will go in vain.
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(15).png)
+![Image](pictures/8.png)
 
 <font size="2">(O: the output of the chemical)</font>
 
 <font size="2">(Real situation: Gene control both the features and the output of the chemical)</font>
 
-![Image](https://github.com/Vigelos/Causal-Inference/blob/gh-pages/pictures/part1/2021-09-25%20(16).png)
+![Image](pictures/9.png)
 
 <font size=2>(Ostensible situation: features have causal effect on the output of the chemical)</font>
 
