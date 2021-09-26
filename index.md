@@ -10,6 +10,8 @@ may seem not so easy for new-comers to get start. So this
 blog is to introduce the basic theory of Causal Inference 
 as simply as possible but meanwhile keeps the structure clear.</font>
 
+<img src="pictures/1.png"></img>
+
 ---
 ## Part I : Introduction
 ### 1. What is causal?
