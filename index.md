@@ -45,6 +45,7 @@ on A changed.
 Variables statistically dependent.<br>
 
 ![Image](pictures/2.png)
+
 <font size="2">(O: oil price &nbsp;&nbsp; H: house price)</font>
 
 We may often see that the house price in a country where 
@@ -101,6 +102,7 @@ contributes to a higher grade, we assume that regular exercise
 has causal effect on good grades:
 
 ![Image](pictures/5.png)
+
 
 <font size=2>(E: regular exercise &nbsp;&nbsp; G: good grades)</font>
 
