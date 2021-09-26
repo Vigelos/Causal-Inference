@@ -199,6 +199,8 @@ will go in vain.
 
 <font size="2">(O: the output of the chemical)</font>
 
+<br>
+
 <font size="2">(Real situation: Gene control both the features and the output of the chemical)</font>
 
 ![Image](pictures/9.png)
