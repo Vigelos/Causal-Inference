@@ -2,12 +2,12 @@
 
 
 
-<font size=2>Causal Inference has recently become a hot 
-topic to improve the result of many previous methods 
-in the area of machine learning, receiving considerable 
-feedback. However, the whole system of causal inference 
-may seem not so easy for new-comers to get start. So this 
-blog is to introduce the basic theory of Causal Inference 
+<font size=2>Causal Inference has recently become a hot
+topic to improve the result of many previous methods
+in the area of machine learning, receiving considerable
+feedback. However, the whole system of causal inference
+may seem not so easy for new-comers to get start. So this
+blog is to introduce the basic theory of Causal Inference
 as simply as possible but meanwhile keeps the structure clear.</font>
 
 
@@ -15,10 +15,10 @@ as simply as possible but meanwhile keeps the structure clear.</font>
 ---
 ## Part I : Introduction
 ### 1. What is causal?
-It seems a stupid question since everyone can simply 
-answer, but, the **causal** relation mentioned this blog 
-may different slightly from what **causal** means in our 
-daily life. 
+It seems a stupid question since everyone can simply
+answer, but, the **causal** relation mentioned this blog
+may different slightly from what **causal** means in our
+daily life.
 
 Let me introduce some terms first:
 ```html
@@ -31,16 +31,14 @@ Operation: Observation(Condition) / Intervention
 The change of **cause** will lead to the change of **result**.
 
 ![Image](pictures/1.png)
-<!-- <img src="pictures/1.png"> -->
 
 
-<font size=2>(A: body temperature &nbsp; &nbsp;B: thermometer)</font>
-<br><br>
-Empirically, we can simply figure out that it is the change
-in body temperature that leads to different readings on the 
-thermometer. In this case, A is **independent variable** and 
-B is **dependent variable**, which will change correspondingly
-on A changed.
+Empirically, we can simply figure out that RNA is transcribed
+from DNA, and it is the change in DNA that will cause 
+the change in RNA, this is a typical **Causal relation**. 
+In this case, DNA is **independent variable** and
+RNA is **dependent variable**, which will change correspondingly
+on DNA changed.
 
 <br>
 
@@ -51,18 +49,18 @@ Variables statistically dependent.<br>
 
 <font size="2">(O: oil price &nbsp;&nbsp; H: house price)</font>
 
-We may often see that the house price in a country where 
-the oil price is high will also be considerably high, and 
+We may often see that the house price in a country where
+the oil price is high will also be considerably high, and
 if the house price is dropping quickly, we are likely to
-predict that the oil price will also be dropping. **The 
-two variables are highly dependent in statistics data.** 
+predict that the oil price will also be dropping. **The
+two variables are highly dependent in statistics data.**
 <br><br>
-But, it is absurd to conclude that the change in the oil price 
+But, it is absurd to conclude that the change in the oil price
 accounts for the change in the house price. Actually, **inflation
 caused both oil price and house price to rise**. It made us
-cheated by the phenomenon and **misunderstand the association 
-relation between oil price and house price as causal 
-association**. So, later in this blog, we will refer to variables 
+cheated by the phenomenon and **misunderstand the association
+relation between oil price and house price as causal
+association**. So, later in this blog, we will refer to variables
 of this type as ***confounder***.
 
 ![Image](pictures/3.png)
@@ -72,16 +70,17 @@ of this type as ***confounder***.
 <br>
 
 #### Observation(Condition):
-Observation means directly get the data from the raw statistics 
+Observation means directly get the data from the raw statistics
 data and then use it as **prior knowledge** to predict other
-variables. For example, if given an unknown thermometer, we
-would predict the reading by randomly guess but if we observe
-that the patient has caught a fever, we would likely guess 
-the reading is at about 39'C.<br>
+variables. For example, if given an unknown person, we
+would predict his DNA sequence by randomly guess(maybe A-T-G-C-C-G-A...)
+but if we observe the RNA sequence of this person, we can
+then use this prior knowledge to further infer the DNA sequence
+of this person.<br>
 
-As described above, observation on the independent variable 
-will lead to the change in our prediction on the dependent
-variable(P(y)!=P(y|x)). Actually, observation will affect
+As described above, observation on the dependent variable
+will lead to the change in our prediction on the independent
+variable(P(x)!=P(x|y)). Actually, observation will affect the prediction of
 it's counterpart in all relationships:<br>
 
 ![Image](pictures/4.png)
@@ -98,7 +97,7 @@ D: Dependent variable in causation)
 ```
 <br>
 
-#### Intervention 
+#### Intervention
 Intervention means manually changed a variable to a certain
 value, for example: if we want to find whether regular exercise
 contributes to a higher grade, we assume that regular exercise
@@ -109,10 +108,10 @@ has causal effect on good grades:
 
 <font size=2>(E: regular exercise &nbsp;&nbsp; G: good grades)</font>
 
-To prove our assumption, **we command that all students in 
-our school must exercise regularly**, and then we surprisingly 
+To prove our assumption, **we command that all students in
+our school must exercise regularly**, and then we surprisingly
 found that the grades of all students has been improved,
-which means regular exercise do have causal effect on 
+which means regular exercise do have causal effect on
 a good grade.(In contrast, **observation** is we only take the students who exercise regularly as example and leave ones exercise irregularly alone.)
 
 In this case, we use **do(E=e) or do(e)** to denote that we
@@ -122,12 +121,11 @@ irrespective of whether the student's exercise condition
 is originally regular or irregular if there hadn't been our
 experiment.
 
-
-<br>
-
-Unlike **condition** mentioned above, **intervention** only 
-effects the dependent variable as independent variable in 
-causal association:
+Unlike **condition** mentioned above, **intervention** only
+effects the dependent variable as independent variable in
+causal association(If we insert a certain fragment into DNA
+, RNA will certainly change correspondingly, but if we insert
+a certain fragment into RNA, DNA will not change.):
 
 ![Image](pictures/6.png)
 
@@ -159,7 +157,7 @@ of iris:
 
 As we have learned in many methods in machine learning,
 we use the four features (L1,L2,L3,L4) to predict the species
-labels. In this case, the relation between features and 
+labels. In this case, the relation between features and
 the species are **association**, not **causation**. Actually
 the causal structure should be like this:
 
@@ -186,11 +184,11 @@ data:
 | 5.0 | 3.3 | 1.4 | 0.2 | 0.9 |
 
 Form this chart, we may easily discover that if the value of
-feature L1,L3 and L4 is high, the output of the chemical 
-can also be relatively high. If we want to maximize the 
+feature L1,L3 and L4 is high, the output of the chemical
+can also be relatively high. If we want to maximize the
 output of the chemical, we may attempt to make the feature
 L1 of the flowers higher by fertilizer or other means. But
-this will not help since the output of the chemical 
+this will not help since the output of the chemical
 depends largely on the species rather than the features.
 Because we misunderstand association as causation, our plan
 will go in vain.
